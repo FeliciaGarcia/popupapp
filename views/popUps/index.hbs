@@ -1,12 +1,20 @@
-	<h1>Let's go to a Pop Up!</h1>
-<a href="/users/login" class="btn btn-default">Log in<a/>
-<a href="/users/signup" class="btn btn-default">Sign up<a/>
-<a href="/popUps/new" class="btn btn-default">Add a pop up</a>
-    {{#each popUps}}
+    <nav class="navbar navbar-inverse">
+  	<div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/popUps">Pop-up!</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/users/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/users/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+<h1>Let's go to a Pop Up!</h1>
    	<div class="stuff">
-        <h1><a href="/popUps/{{this.id}}">{{this.name}}</a></h1>
+   	{{#each popUps}}
+        <h2><a href="/popUps/{{this.id}}">{{this.name}}</a></h2>
         <h3>{{this.cuisine}}</h3>
-        <p>{{this.location}}, {{this.hours}}</p>
+        <p>{{this.location}} {{this.hours}}</p>
    
     {{/each}}
     </div>
@@ -15,14 +23,12 @@
 	
 
 	}
-	.btn {
-		background-color: #FB3A24;
-		color: white;
-	}
+
 	
-	a {
-		background-color:#FB3A24;
-		border-radius: 7px;
+	.stuff {
+		display: inline-flex;
+	}
+
 
 
 	}

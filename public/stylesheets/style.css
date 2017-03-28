@@ -1,19 +1,33 @@
 body {
-  padding: 50px;
+  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  text-align: center;
+ display: inline;
 
 }
-
-a {
-    color: #000;
+h1 {
+	text-align: center;
+}
+.stuff {
+		display: inline;
+		background-color: #FB3A24;
+		width: 100px;
+		height: 100px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
 }
 
 
 .btn.btn-primary, .btn.btn-danger {
     margin-top: 20px;
+    
 }
 
 .btn.btn-default {
     margin-top: 50px;
+   
 }
+.btn {
+		background-color: #FB3A24;
+		color: white;
+	}
