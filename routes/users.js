@@ -51,18 +51,6 @@ router.patch('/:id', function(req, res){
     });
   });
 });
-//show users
-router.get("/:id", authHelpers.authorized, function(req, res) {
-  User.findById(req.params.id)
-    .exec(function(err, user) {
-      if (err) { console.log(err); }
-      res.render("users/show", {
-        user: user,
-        currentUser: req.session.currentUser
-      });
-    });
-});
-//author
 router.post('/', authHelpers.createPassword, function(req, res){
   var user = new User ({
     firstname: req.body.firstname,
@@ -77,8 +65,21 @@ router.post('/', authHelpers.createPassword, function(req, res){
     console.log(user);
     console.log(req.session.currentUser);
     res.redirect('/users');
-  });
+   });
 });
+
+//show users
+router.get("/:id", authHelpers.authorized, function(req, res) {
+  User.findById(req.params.id)
+    .exec(function(err, user) {
+      if (err) { console.log(err); }
+      res.render("users/show", {
+        user: user,
+        currentUser: req.session.currentUser
+      });
+    });
+});
+
 
 
 
