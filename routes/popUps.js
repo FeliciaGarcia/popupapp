@@ -60,7 +60,7 @@ router.patch('/:id', function(req, res) {
         cuisine:req.body.cuisine,
         location: req.body.location,
         hours: req.body.hours,
-        photo: req.body.photo,
+        photo: req.body.photo
         // pic: req.body.pic
 }, {new: true})
         .exec(function(err, popUps) {
