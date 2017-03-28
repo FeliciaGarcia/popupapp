@@ -1,24 +1,54 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var schema = mongoose.connection;
+// Use native promises
+mongoose.Promise = global.Promise;
 
-mongoose.promise = global.Promise;
+var popUpSchema = new Schema({
+    name: String,
+    cuisine: String,
+    location: String,
+    hours: String,
+    photo: String
+});
+popUpSchema.pre('save', function(next){
+    now = new Date();
+    this.updated_at = now;
+    if ( !this.created_at ) {
+        this.created_at = now;
+    }
+    next();
+});
 
-// // CONNECTION EVENTS
-// // db.once('open', function() {
-// //   console.log("Opened mongoose.");
-// // });
-// // db.once('close', function() {
-// //   console.log("Closed mongoose.");
-// // });
-// // db.on('connected', function() {
-// //   console.log('Mongoose connected to ' + db.host + ':' + db.port + '/' + db.name);
-// // });
-// // db.on('error', function(err) {
-// //   console.log('Mongoose connection error: ' + err);
-// // });
-// // db.on('disconnected', function() {
-// //   console.log('Mongoose disconnected');
-// // });
+popUpSchema.virtual('nameOfPopUp').get(function () {
+    return this.name + ' ' ;
+});
 
-module.exports = User: UserModel;
+var UserSchema = new Schema({
+    firstname: String,
+    username: String,
+    password: { type: String, required: true, unique: true },
+    password_digest: String,
+  	created_at: Date,
+  	updated_at: Date,
+  	// popUps: [popUpsSchema]
+});
+
+UserSchema.pre('save', function(next){
+  now = new Date();
+  this.updated_at = now;
+  if ( !this.created_at ) {
+    this.created_at = now;
+  }
+  next();
+});
+
+
+
+var UserModel = mongoose.model("User", UserSchema);
+var popUpModel = mongoose.model("popUp", popUpSchema);
+
+module.exports = {
+  User: UserModel,
+  popUp: popUpModel
+};

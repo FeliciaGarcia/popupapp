@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var User = require('../models/user');
+var User = require('../models/user.js');
 var authHelpers = require('../helper/authorize.js');
 
 /* GET users listing. */
@@ -52,7 +52,7 @@ router.patch('/:id', function(req, res){
   });
 });
 router.post('/', authHelpers.createPassword, function(req, res){
-  var user = new User ({
+  var user = new User({
     firstname: req.body.firstname,
     username: req.body.username,
     password: req.body.password,

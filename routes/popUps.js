@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var Schema = require('../models/popUp.js');
-var popUps = Schema.popUps;
+var popUps = require('../models/popUp.js');
 
 
 router.get('/', function(req, res) {

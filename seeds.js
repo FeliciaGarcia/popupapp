@@ -1,24 +1,24 @@
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/popUps');
+// var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/popUps');
 
-var popUps = require("./models/popUp");
+// var popUps = require("./models/popUp");
 
-mongoose.promise = global.Promise;
+// mongoose.promise = global.Promise;
 
-popUps.remove({}, function(err) {
-    console.log(err);
-});
+// popUps.remove({}, function(err) {
+//     console.log(err);
+// });
 
-var firstPopUp = new popUps({
-    name: 'Everybody Loves Ramen',
-    cuisine: 'asian',
-    location: 'Atlanta',
-    hours: 'Sundays',
-    photo: 'caption'
-});
+// var firstPopUp = new popUps({
+//     name: 'Everybody Loves Ramen',
+//     cuisine: 'asian',
+//     location: 'Atlanta',
+//     hours: 'Sundays',
+//     photo: 'caption'
+// });
 
-firstPopUp.save(function(err) {
-  if (err) console.log(err);
+// firstPopUp.save(function(err) {
+//   if (err) console.log(err);
 
-  console.log('Everybody Loves Ramen!');
-});
+//   console.log('Everybody Loves Ramen!');
+// });

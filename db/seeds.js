@@ -1,12 +1,18 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/popUps');
 
-var popUps = require("./models/popUp");
+var User = require('../models/user');
+var popUps = require('../models/popUp');
 
-mongoose.promise = global.Promise;
+// Use native promises
+mongoose.Promise = global.Promise;
 
-popUps.remove({}, function(err) {
-    console.log(err);
+// First we clear the database of existing users and items.
+popUps.remove({}, function(err){
+  console.log(err);
+});
+User.remove({}, function(err){
+  console.log(err);
 });
 
 var firstPopUp = new popUps({
@@ -16,9 +22,15 @@ var firstPopUp = new popUps({
     hours: 'Sundays',
     photo: 'caption'
 });
+var Neysa = new User({
+  firstname: 'Neysa',
+  username: 'neysa21',
+});
 
 firstPopUp.save(function(err) {
   if (err) console.log(err);
-
-  console.log('Everybody Loves Ramen!');
+  console.log('popUps created!');
 });
+
+
+
