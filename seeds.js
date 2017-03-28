@@ -14,7 +14,7 @@ var firstPopUp = new popUps({
     cuisine: 'asian',
     location: 'Atlanta',
     hours: 'Sundays',
-    photo: 'Insert photo here'
+    photo: 'caption'
 });
 
 firstPopUp.save(function(err) {
