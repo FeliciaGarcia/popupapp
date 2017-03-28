@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
   	<div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/popUps">Pop-up!</a>
+      <a class="navbar-brand" href="/popUps">Find a pop-up!</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="/users/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -9,15 +9,20 @@
     </ul>
   </div>
 </nav>
-<h1>{{popUps.name}}</h1>
-<h3>{{popUps.cuisine}}</h3>
-<p>{{popUps.location}}, {{popUps.hours}}</p>
 <div>
-	<a href="/popUps" class="btn btn-default">Main Page</a>
-	<!-- <a href="/popUps/{{popUps.id}}/new" class="btn btn-primary">New {{popUps.name}}</a> -->
-    <a href="/popUps/{{popUps.id}}/edit" class="btn btn-primary">Edit {{popUps.name}}</a>
-
-    <form action="/popUps/{{popUps.id}}?_method=DELETE" method="POST">
-    	<input type="submit" value="DELETE" class="btn btn-danger" />
-	</form>
+	<div class="summary">
+		<h1>{{popUps.name}}</h1>
+		<h3>{{popUps.cuisine}}</h3>
+		<p>{{popUps.location}}, {{popUps.hours}}</p>
+	</div>
+		<ul>
+				<li><a href="/popUps" class="btn btn-default">Home Page</a></li>
+				<li><a href="/popUps/{{popUps.id}}/edit" class="btn btn-primary">Edit {{popUps.name}}</a></li>
+				<li>
+				<form action="/popUps/{{popUps.id}}?_method=DELETE" method="POST">
+			    <input type="submit" value="DELETE" class="btn btn-danger" />
+				</form>
+				</li>
+		</ul>
+	
 </div>

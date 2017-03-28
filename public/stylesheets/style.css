@@ -2,19 +2,43 @@ body {
   
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
  display: inline;
-
+background-image: url('http://i.imgur.com/ZQ9vK6l.png');
+background-repeat:no-repeat;
+background-size: 100%;
 }
+ 
+/*.summary {
+	background-color: white;
+	border-radius: 10px;
+	opacity: .8;
+	width: 400px;
+	font-weight: ;
+}*/
 h1 {
-	text-align: center;
+	background-color: white;
+	border-radius: 10px;
+	opacity: .8;
+	width: 400px;
+	font-weight: ;
+	
 }
-.stuff {
-		display: inline;
-		background-color: #FB3A24;
-		width: 100px;
-		height: 100px;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
+h2 {
+	background-color: white;
+	border-radius: 10px;
+	opacity: .8;
+	width: 400px;
+}
+h3 {
+	background-color: white;
+	border-radius: 10px;
+	opacity: .8;
+	width: 400px;
+}
+p {
+	background-color: white;
+	border-radius: 10px;
+	opacity: .8;
+	width: 400px;
 }
 
 
@@ -28,6 +52,6 @@ h1 {
    
 }
 .btn {
-		background-color: #FB3A24;
-		color: white;
+		background-color:	#80ffbf;
+		color: black;
 	}
