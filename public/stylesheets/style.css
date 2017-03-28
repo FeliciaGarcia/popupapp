@@ -4,7 +4,7 @@ body {
  display: inline;
 background-image: url('http://i.imgur.com/ZQ9vK6l.png');
 background-repeat:no-repeat;
-background-size: 100%;
+background-size: 200%;
 }
  
 /*.summary {
@@ -20,7 +20,7 @@ h1 {
 	opacity: .8;
 	width: 400px;
 	font-weight: ;
-	
+
 }
 h2 {
 	background-color: white;

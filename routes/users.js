@@ -5,7 +5,7 @@ var authHelpers = require('../helper/authorize.js');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    user.find({})
+    User.find({})
         .exec(function(err, users) {
             if(err) console.log(err);
 
