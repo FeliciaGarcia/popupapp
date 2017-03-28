@@ -12,9 +12,7 @@ var db = require('./db');
 var hbs = require('hbs');
 mongoose.connect('mongodb://localhost/popUps');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-var popUps = require('./routes/popUps');
+
 
 var app = express();
 
@@ -36,10 +34,17 @@ app.use(session({
   saveUninitialized: false
 }));
 
+
+
+var index = require('./routes/index');
+var users = require('./routes/users');
+var popUps = require('./routes/popUps');
+var sessions = require('./routes/sessions');
+
 app.use('/', index);
 app.use('/users', users);
 app.use('/popUps', popUps);
-
+// app.use('/sessions', sessions);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

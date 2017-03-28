@@ -3,7 +3,7 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
  display: inline;
 background-image: url('http://i.imgur.com/ZQ9vK6l.png');
-background-repeat:no-repeat;
+background-repeat:repeat;
 background-size: 200%;
 }
  

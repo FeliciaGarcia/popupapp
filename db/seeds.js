@@ -32,5 +32,8 @@ firstPopUp.save(function(err) {
   console.log('popUps created!');
 });
 
-
+Neysa.save(function(err) {
+  if (err) console.log(err);
+  console.log('User created!');
+});
 

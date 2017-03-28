@@ -4,7 +4,7 @@ var router = express.Router();
 var popUps = require('../models/popUp.js');
 
 
-router.get('/', function(req, res) {
+router.get('/', function indexAction(req, res) {
     // res.send('this is working');
     popUps.find({})
         .exec(function(err, popUps) {
@@ -19,11 +19,11 @@ router.get('/', function(req, res) {
 });
 
 // new popUps
-router.get('/new', function(req, res) {
+router.get('/new', function newAction(req, res) {
     res.render('popUps/new');
 });
 // create popUps
-router.post('/', function(req, res) {
+router.post('/', function createAction(req, res) {
 	console.log("The name from the request is: " + req.body.name);
     var newPopUp = new popUps({
         name: req.body.name,
@@ -42,7 +42,7 @@ router.post('/', function(req, res) {
     });
 });
 // edit popUps
-router.get('/:id/edit', function(req,res) {
+router.get('/:id/edit', function editAction(req,res) {
     popUps.findById(req.params.id)
     .exec(function(err, popUps) {
         if (err) { console.log(err); }
@@ -53,7 +53,7 @@ router.get('/:id/edit', function(req,res) {
     });
 });
 // update popUps
-router.patch('/:id', function(req, res) {
+router.patch('/:id', function updateAction(req, res) {
     popUps.findByIdAndUpdate(req.params.id, {
     	name: req.body.name,
         cuisine:req.body.cuisine,
@@ -73,7 +73,7 @@ router.patch('/:id', function(req, res) {
         });
 });
 // delete popUps
-router.delete('/:id', function(req, res) {
+router.delete('/:id', function destroyAction(req, res) {
     popUps.findByIdAndRemove(req.params.id)
         .exec(function(err, popUps) {
             if (err) { console.log(err); }
@@ -85,7 +85,7 @@ router.delete('/:id', function(req, res) {
         });
 });
 // show popUps
-router.get('/:id', function(req, res) {
+router.get('/:id', function showAction(req, res) {
     popUps.findById(req.params.id)
         .exec(function(err, popUps) {
             if(err) console.log(err);
