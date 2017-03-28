@@ -1,0 +1,19 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+
+}
+
+a {
+    color: #000;
+}
+
+
+.btn.btn-primary, .btn.btn-danger {
+    margin-top: 20px;
+}
+
+.btn.btn-default {
+    margin-top: 50px;
+}

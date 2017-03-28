@@ -1,0 +1,37 @@
+
+	<h1>Let's go to a Pop Up!</h1>
+
+<a href="/popUps/new" class="btn btn-default">Add a pop up</a>
+
+    {{#each popUps}}
+   	<div class="stuff">
+        <h1><a href="/popUps/{{this.id}}">{{this.name}}</a></h1>
+        <h3>{{this.cuisine}}</h3>
+        <p>{{this.location}}, {{this.hours}}</p>
+   
+    {{/each}}
+    </div>
+<style>
+	
+	
+
+	}
+	.btn {
+		background-color: #FB3A24;
+		color: white;
+	}
+	
+	a {
+		background-color:#FB3A24;
+		border-radius: 7px;
+
+
+	}
+	a:hover {
+		color: white;
+
+	}
+</style>
+
+
+
