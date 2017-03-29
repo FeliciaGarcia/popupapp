@@ -1,5 +1,8 @@
+
+
 body {
 		background-image: url('http://i.imgur.com/ZQ9vK6l.png');
+		font-style: url('https://fonts.googleapis.com/css?family=Lato');
 }
 
 .btn {
@@ -10,7 +13,6 @@ body {
 		text-align: center;
 		opacity: .85;
 }
-form {
-	background-color: black;
-	color: white;
+#signOut {
+	margin-top: 250px;
 }
