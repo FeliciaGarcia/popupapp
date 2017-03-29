@@ -12,14 +12,13 @@ var db = require('./db');
 var hbs = require('hbs');
 // var fs = require('fs');
 // var im = require('imagemagick');
-// if (process.env.MONGODB_URI) {
-//   mongoose.connect(process.env.MONGODB_URI)
-// } else {
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI)
+} else {
   mongoose.connect('mongodb://localhost/popUps');
 
 
 //here are all of my requires for my data that I need
-
 
 var app = express();
 
