@@ -29,9 +29,8 @@ router.post('/', function createAction(req, res) {
         name: req.body.name,
         cuisine:req.body.cuisine,
         location: req.body.location,
-        hours: req.body.hours
-        // photo: req.body.photo,
-        // pic: req.body.pic
+        hours: req.body.hours,
+        additional: req.body.additional
     });
     newPopUp.save(function(err){
         if (err) { console.log(err); }
@@ -59,8 +58,8 @@ router.patch('/:id', function updateAction(req, res) {
         cuisine:req.body.cuisine,
         location: req.body.location,
         hours: req.body.hours,
-        photo: req.body.photo
-        // pic: req.body.pic
+        additional: req.body.additional
+    
 }, {new: true})
         .exec(function(err, popUps) {
             if (err) { console.log(err); }

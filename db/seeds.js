@@ -19,7 +19,9 @@ var firstPopUp = new popUps({
     name: 'Everybody Loves Ramen',
     cuisine: 'asian',
     location: 'Atlanta',
-    hours: 'Sundays'
+    hours: 'Sundays',
+    additional: 'notes'
+
     // photo: 'caption'
 });
 var Neysa = new User({

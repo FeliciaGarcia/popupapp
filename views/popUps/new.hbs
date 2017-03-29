@@ -17,10 +17,10 @@
             <label for="hours">Hours:</label>
             <input type="text" name="hours" class="form-control">
         </div>
-            <form id="mainform" enctype="multipart/form-data" action="/popUps" method="post">
-            <label for="imageupload">Image file:</label>
-            <input name="imageupload" id="imageupload" type="file" /><br />
-            <input name="submit" id="submit" type="submit" value="submit" </form>
+        <div class="form-group">
+            <label for="additional">Additional info:</label>
+            <input type="text" name="additional" class="form-control">
+        </div>
         <div>
             <input type="submit" value="Submit" class="btn btn-primary">
         </div>
@@ -29,7 +29,7 @@
 
 
 <footer>
-    <a href="/popUps/{{popUps.id}}" class="btn btn-default">Back</a>
-    <a href="/popUps" class="btn btn-default">Home Page</a>
+    <a href="/popUps/{{popUps.id}}" class="btn btn-default">Back to pop-ups</a>
+   <!--  <a href="/popUps" class="btn btn-default">Home Page</a> -->
 </footer>
 
