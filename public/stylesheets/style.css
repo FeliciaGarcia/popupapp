@@ -1,18 +1,21 @@
-
-
 body {
 		background-image: url('http://i.imgur.com/ZQ9vK6l.png');
-		font-style: url('https://fonts.googleapis.com/css?family=Lato');
+		font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
 .btn {
-		background-color:	#80ffbf;
-		color: black;
+		background-color:	#ccffee;
+		color: #5353c6;
+		border-radius: 15px;
+		
 }
 .jumbotron {
 		text-align: center;
 		opacity: .85;
+		font-family: Impact, Charcoal, sans-serif;
 }
 #signOut {
 	margin-top: 250px;
 }
+
+
