@@ -14,7 +14,8 @@ popUps.remove({}, function(err){
 User.remove({}, function(err){
   console.log(err);
 });
-
+//here is the first amount of content that I will implement in the app
+//the rest will be content provided by the user
 var firstPopUp = new popUps({
     name: 'Everybody Loves Ramen',
     cuisine: 'asian',

@@ -59,6 +59,7 @@ router.post('/', authHelpers.createPassword, function(req, res){
     password_digest: res.hashedPassword
 
   });
+  //this is my post route to create  log in information
 
   user.save(function(err, user){
     if (err) console.log(err);

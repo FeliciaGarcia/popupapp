@@ -14,7 +14,7 @@ var fs = require('fs');
 var im = require('imagemagick');
 mongoose.connect('mongodb://localhost/popUps');
 
-//here are all of 
+//here are all of my requires for my data that I need
 
 
 var app = express();
@@ -97,17 +97,22 @@ app.use(session({
   saveUninitialized: false
 }));
 
-
+//here are the things that I need to use so that I can access that data
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 var popUps = require('./routes/popUps');
 var sessions = require('./routes/sessions');
 
+//here are my routes that I need to require so that my content can connect to them.
+
 app.use('/', index);
 app.use('/users', users);
 app.use('/popUps', popUps);
 app.use('/sessions', sessions);
+
+//I use my routes by calling those variables and putting the path they would go on to find
+//those files
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -115,6 +120,9 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+//if the server goes through all of those routes and can't find something that I listed, 
+//it will give me the error above
 
 // error handler
 app.use(function(err, req, res, next) {

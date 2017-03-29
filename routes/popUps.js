@@ -22,7 +22,9 @@ router.get('/', function indexAction(req, res) {
 router.get('/new', function newAction(req, res) {
     res.render('popUps/new');
 });
-// create popUps
+// create popUps here I have listed all of the things that will appear in a form. 
+//If nothing is provided, it will still post, and I can go back and delete it through the
+//app or edit it
 router.post('/', function createAction(req, res) {
 	console.log("The name from the request is: " + req.body.name);
     var newPopUp = new popUps({
@@ -71,7 +73,8 @@ router.patch('/:id', function updateAction(req, res) {
             });
         });
 });
-// delete popUps
+// delete popUps. Once the pop up is deleted it will redirect you to
+// to the home page
 router.delete('/:id', function destroyAction(req, res) {
     popUps.findByIdAndRemove(req.params.id)
         .exec(function(err, popUps) {
