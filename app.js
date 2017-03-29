@@ -10,11 +10,74 @@ var session = require('express-session');
 var methodOverride = require('method-override');
 var db = require('./db');
 var hbs = require('hbs');
+var fs = require('fs');
+var im = require('imagemagick');
 mongoose.connect('mongodb://localhost/popUps');
 
+//here are all of 
 
 
 var app = express();
+
+
+// //code that I found from a helpful article and I want to see if it would work in my project
+// var form = "<!DOCTYPE HTML><html><body>" +
+// "<form method='post' action='/images' enctype='multipart/form-data'>" +
+// "<input type='file' name='imageupload' id='imageupload'/>" +
+// "<input type='submit' /></form>" +
+// "</body></html>";
+
+// app.get('/', function (req, res){
+//   res.writeHead(200, {'Content-Type': 'text/html' });
+//   res.end(form);  
+// });
+
+// app.post('/images', function(req, res) {
+//   fs.readFile(req.files.image.path, function (err, data) {
+//     var imageName = req.files.image.name
+// if(!imageName){
+//       console.log("There was an error")
+//       res.redirect("/");
+//       res.end();
+//     } else {
+//       var newPath = __dirname + "/public/images/fullsize/" + imageName;
+//       var thumbPath = __dirname + "/public/images/thumbs/" + imageName;
+//       // write file to uploads/fullsize folder
+//       fs.writeFile(newPath, data, function (err) {
+//         im.resize({
+//           srcPath: newPath,
+//           dstPath: thumbPath,
+//           width:   200
+//         }, function(err, stdout, stderr){
+//           if (err) throw err;
+//           console.log('resized image to fit within 200x200px');
+//         });
+//         // let's see it
+//         res.redirect("/images/fullsize/" + imageName);
+//       });
+//     }
+//   });
+// });
+// app.get('/images/fullsize/:file', function (req, res){
+//   file = req.params.file;
+//   var img = fs.readFileSync(__dirname + "/images/fullsize/" + file);
+//   res.writeHead(200, {'Content-Type': 'image/jpg' });
+//   res.end(img, 'binary');
+
+// });
+// app.get('/images/thumbs/:file', function (req, res){
+//   file = req.params.file;
+//   var img = fs.readFileSync(__dirname + "/images/thumbs/" + file);
+//   res.writeHead(200, {'Content-Type': 'image/jpg' });
+//   res.end(img, 'binary');
+// });
+
+
+
+
+
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -65,3 +128,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
