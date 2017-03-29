@@ -8,8 +8,8 @@ var popUpSchema = new Schema({
     name: String,
     cuisine: String,
     location: String,
-    hours: String,
-    photo: String
+    hours: String
+    // photo: String
 });
 popUpSchema.pre('save', function(next){
     now = new Date();

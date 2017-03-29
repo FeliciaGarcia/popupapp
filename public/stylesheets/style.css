@@ -10,3 +10,7 @@ body {
 		text-align: center;
 		opacity: .85;
 }
+form {
+	background-color: black;
+	color: white;
+}

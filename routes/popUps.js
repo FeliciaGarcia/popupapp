@@ -29,8 +29,8 @@ router.post('/', function createAction(req, res) {
         name: req.body.name,
         cuisine:req.body.cuisine,
         location: req.body.location,
-        hours: req.body.hours,
-        photo: req.body.photo,
+        hours: req.body.hours
+        // photo: req.body.photo,
         // pic: req.body.pic
     });
     newPopUp.save(function(err){
