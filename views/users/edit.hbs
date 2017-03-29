@@ -1,5 +1,5 @@
 <h1>Edit {{user.firstname}}'s Profile</h1>
-<form action="/users/{{user.id}}?_method=PUT" method="POST">
+<form action="/users/{{user.id}}?_method=PATCH" method="POST">
   <div>
     <label for="firstname">What's your name?</label>
     <input type="text" value="{{user.firstname}}" name="firstname">

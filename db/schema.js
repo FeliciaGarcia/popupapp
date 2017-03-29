@@ -30,8 +30,8 @@ var UserSchema = new Schema({
     password: { type: String, required: true, unique: true },
     password_digest: String,
   	created_at: Date,
-  	updated_at: Date,
-  	// popUps: [popUpsSchema]
+  	updated_at: Date
+  	// favorites: [popUpsSchema]
 });
 
 UserSchema.pre('save', function(next){

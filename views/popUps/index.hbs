@@ -1,38 +1,27 @@
-    <nav class="navbar navbar-inverse">
-  	<div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/popUps">Find a new pop-up</a>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="/users/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="/sessions/login"><span class="glyphicon glyphicon-login"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-<h1>Let's go to a Pop Up!</h1>
-   	<div class="stuff">
-   	{{#each popUps}}
-        <h2><a href="/popUps/{{this.id}}">{{this.name}}</a></h2>
-        <h3>{{this.cuisine}}</h3>
-        <p>{{this.location}} {{this.hours}}</p>
-   
+<h1 class="jumbotron">Let's go to a Pop Up!</h1>
+<div>
+  <div class="row">
+  	{{#each popUps}}
+      <div class="col-md-3 col-xs-12">
+        <h2>
+          <a class="btn btn-primary" href="/popUps/{{this.id}}">
+            <h3>{{this.name}}</h3>
+            <h3>{{this.cuisine}}</h3>
+            <p>{{this.location}} {{this.hours}}</p>
+          </a>
+        </h2>
+      </div>
+
     {{/each}}
-    </div>
-<style>
-	
-	
-
-
-
-
-
-
+  </div>
+</div>
+<!-- <style>
 	}
 	a:hover {
 		color: white;
 
 	}
-</style>
+</style> -->
 
 
 

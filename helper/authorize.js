@@ -10,11 +10,14 @@ function createPassword(req, res, next) {
 function signinUser(req, res, next) {
   var username = req.body.username;
   var password = req.body.password;
-
-  User.findOne({ username: username })
+  console.log(username, password);
+  User.findOne({ 
+    username: username 
+  })
   .then(function(foundUser) {
+    console.log(foundUser)
     if (foundUser === null) {
-      res.json({status: 404, data: "unauthorized"});
+      res.send("sorry, you don't have an account");
     } else if (bcrypt.compareSync(password, foundUser.password_digest)) {
       req.session.currentUser = foundUser;
     }
@@ -33,6 +36,9 @@ function authorized(req, res, next) {
     next()
   }
 };
+
+
+
 module.exports = {
   createPassword: createPassword,
   signinUser: signinUser,

@@ -44,7 +44,7 @@ var sessions = require('./routes/sessions');
 app.use('/', index);
 app.use('/users', users);
 app.use('/popUps', popUps);
-// app.use('/sessions', sessions);
+app.use('/sessions', sessions);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
