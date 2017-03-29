@@ -10,7 +10,7 @@ var session = require('express-session');
 var methodOverride = require('method-override');
 var db = require('./db');
 var hbs = require('hbs');
-var fs = require('fs');
+// var fs = require('fs');
 // var im = require('imagemagick');
 mongoose.connect('mongodb://localhost/popUps');
 
