@@ -11,7 +11,7 @@ var methodOverride = require('method-override');
 var db = require('./db');
 var hbs = require('hbs');
 var fs = require('fs');
-var im = require('imagemagick');
+// var im = require('imagemagick');
 mongoose.connect('mongodb://localhost/popUps');
 
 //here are all of my requires for my data that I need
