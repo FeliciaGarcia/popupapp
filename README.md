@@ -11,3 +11,6 @@ https://trello.com/b/YdMIXeTA/pop-up
 
 Here is a link to my wireframes and my ERD
 http://imgur.com/oLL4HTD
+
+Lastly, here is a link to my portfolio with the added site 
+http://bricklayer-otter-67257.bitballoon.com/
